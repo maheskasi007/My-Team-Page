@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fafafa;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin: 32px auto;
+}
+
+.content {
+    grid-column: 2/6;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 3rem;
+}
+
+.title_container {
+    grid-column: 1/3;
+}
+
+.title{
+    font-family: "PT Serif", serif;
+    font-size: 36px;
+}
+
+.info_container{
+    grid-column: 3/5;
+}
+
+.info_title {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.info_para{
+    font-size: 18px;
+}
+
+.team_container {
+    grid-column: 2/6;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.profile {
+    display: flex;
+}
+
+.profile_img {
+    width: 90%;
+    height: auto;
+}
+
+.profile h4 {
+    font-family: "PT Serif";
+    writing-mode: vertical-rl;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #000;
+    margin-left: 0.5rem;
+}
+
+.member_name {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Poppins";
+    font-style: normal;
+    margin-top: 1rem;
+}
+
+.team_member:nth-child(2), .team_member:nth-child(5) {
+    margin-top: 5rem;
+}
+
+.footer {
+    grid-row: 3/4;
+    grid-column: 1/8;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #a9a9a9;
+    font-family: 'Montserrat';
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 320px) and (max-width: 900px) {
+
+    .content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .title_container {
+        grid-column: 1/6;
+        margin-bottom: 1rem;
+    }
+  
+    .team_container {
+        grid-row: 3/5;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .team_member:nth-child(2), .team_member:nth-child(5) {
+        margin-top: 0rem;
+    }
+
+    .team_member:nth-child(even){
+        margin-top: 5rem;
+    }
+
+    .footer{
+        grid-row: 6/8;
+    }
+
+    .member_name, .info_title, .info_para {
+        font-size: 15px;
+    }
+
+    .profile h4{
+        font-size: 10px;
+        margin-left: 0.3rem;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .title{
+        font-size: 26px;
+    }   
+  
+    .profile h4{
+        font-size: 8px;
+        margin-left: 0.2rem;
+    }
+
+    .profile_img{
+        width: 85px;
+    }
+    .member_name, .info_title, .info_para {
+        font-size: 12px;
+    }
+    
+  }
